@@ -1,11 +1,45 @@
-<h1><%=@cocktail.name%></h1>
-<h2>Ingredients for <%=@cocktail.name%></h2>
 
-<p><%@cocktail.ingredients.each do |ingredient|%></p>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-6 m-auto">
+        <div class="form">
+<h1><%=@cocktail.name%></h1>
+<br>
+<h3>Ingredients</h3>
+          <div class="mt-3">
+
+<img src="..." class="rounded mx-auto d-block" alt="...">
+<%@cocktail.doses.each do |dose|%>
 <ul>
-<li><%ingredient.name%></li>
+<li> <%=dose.description%> <%=dose.ingredient.name%>
+  <%= link_to "Delete", dose_path(dose), method: :delete %>
+</li>
+</ul>
+<%end%>
+</div>
+
+
+<h3>Reviews</h3>
+<%@cocktail.reviews.each do |review|%>
+<ul>
+<li> <%=review.name%> <%=review.rating%> <%=review.content%>
+  <%= link_to "Delete", cocktail_path(@cocktail), method: :delete %>
+</li>
 </ul>
 <%end%>
 
-<%= link_to "Back", cocktails_path %>
-<%= link_to "Add a dose", new_cocktail_dose_path %>
+
+
+
+<div class="row mt-2">
+    <div class="col-lg-12">
+<%= link_to "Back", cocktails_path, class: "btn btn-primary" %>
+<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+
+<%= link_to "Write a review", new_cocktail_review_path(@cocktail), class: "btn btn-primary" %>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,26 @@
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+<h1>The Mixologist</h1>
+   </div>
+  </div>
+
+<div class="row">
+<% @cocktails.each do |cocktail| %>
+<div class="col-4">
+  <div class="card">
+  <div class="card-image" style="background-color: blue"></div>
+  <div class="card-content">
+  <div class="card-title">
+  <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+  <%= link_to "Delete", cocktail_path(cocktail), method: :delete %>
+</div>
+</div>
+</div>
+  </div>
+</div>
+<%end%>
+<%= link_to "Add a cocktail", new_cocktail_path %>
+
+

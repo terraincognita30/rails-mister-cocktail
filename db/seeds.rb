@@ -9,6 +9,9 @@ ingredients_stuff['drinks'].each do |ingredient|
 end
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+
+Ingredient.destroy_all
+Review.destroy_all
 #
 # Examples:
 #
@@ -32,7 +35,7 @@ Dose.create(cocktail: "The Jordan", ingredient: Ingredient.find_by(name: 'curry'
 Dose.create(cocktail: "The Jordan", ingredient: Ingredient.find_by(name: 'naan'), description: '1')
 Review.create(cocktail: "The Jordan", review_name: 'Kingsley', content: 'This is not a cocktail')
 Review.create(cocktail: "The Jordan", review_name: 'Anon 2', content: 'Not available on Fridays')
-Review.create(cocktail: "The Jordan", review_name: 'Anon', content: 'Lakshmi tastes better')
+Review.create(cocktail: "The Jordan", review_name: 'Anon', content: 'Lakshmi is better')
 
 
 therake = Cocktail.create(name: "The Rake")
@@ -45,5 +48,5 @@ Dose.create(cocktail: "Yann Break", ingredient: Ingredient.find_by(name: 'water'
 
 livecode = Cocktail.create(name: "Livecode")
 Dose.create(cocktail: "Livecode", ingredient: Ingredient.find_by(name: 'Jägermeister'), description: '1')
-Review.create(cocktail: "Livecode", review_name: 'Student 1', content: 'Lakshmi tastes better')
+Review.create(cocktail: "Livecode", review_name: 'Student 1', content: 'Lakshmi is better')
 Review.create(cocktail: "Livecode", review_name: 'Student 2', content: 'Beer in fridge tastes better')

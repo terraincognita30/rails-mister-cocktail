@@ -1,6 +1,7 @@
 # require 'open-uri'
 # require 'JSON'
 
+Cocktail.destroy_all
 Ingredient.destroy_all
 Review.destroy_all
 

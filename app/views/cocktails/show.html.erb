@@ -18,17 +18,14 @@
 <%end%>
 </div>
 
-
-<h3>Reviews</h3>
+<h3 style= "padding-bottom: 10px">Reviews</h3>
 <%@cocktail.reviews.each do |review|%>
-<ul>
-<li> <%=review.name%> <%=review.rating%> <%=review.content%>
+<ul class = "styleless" style= "list-style: none">
+<li> <%=review.review_name%> <%=review.content%>
   <%= link_to "Delete", cocktail_path(@cocktail), method: :delete %>
 </li>
 </ul>
 <%end%>
-
-
 
 
 <div class="row mt-2">

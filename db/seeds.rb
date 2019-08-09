@@ -1,9 +1,9 @@
 # require 'open-uri'
 # require 'JSON'
 
-Cocktail.destroy_all
-Ingredient.destroy_all
-Review.destroy_all
+# Cocktail.destroy_all
+# Ingredient.destroy_all
+# Review.destroy_all
 
 url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 json = open(url).read

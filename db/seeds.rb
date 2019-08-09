@@ -26,12 +26,12 @@ Ingredient.create(name: "red")
 Ingredient.create(name: "green")
 Ingredient.create(name: "Absolut Vodka")
 
-wheresdoug = Cocktail.create(name: "Where's Doug")
+wheresdoug = Cocktail.create(name: "Where's Doug", picture_url: "bg2.jpg")
 Dose.create(cocktail: wheresdoug, ingredient: Ingredient.find_by(name: 'ginger beard'), description: '1 full')
 Review.create(cocktail: wheresdoug, review_name: 'Kingsley', content: 'Unsettling')
 Review.create(cocktail: wheresdoug, review_name: 'Doug', content: 'Refreshing')
 
-thejordan = Cocktail.create(name: "The Jordan")
+thejordan = Cocktail.create(name: "The Jordan", picture_url: "bg2.jpg")
 Dose.create(cocktail: thejordan, ingredient: Ingredient.find_by(name: 'curry'), description: '1')
 Dose.create(cocktail: thejordan, ingredient: Ingredient.find_by(name: 'naan'), description: '1')
 Review.create(cocktail: thejordan, review_name: 'Kingsley', content: 'This is not a cocktail')
@@ -39,15 +39,15 @@ Review.create(cocktail: thejordan, review_name: 'Anon 2', content: 'Not availabl
 Review.create(cocktail: thejordan, review_name: 'Anon', content: 'Lakshmi is better')
 
 
-therake = Cocktail.create(name: "The Rake")
+therake = Cocktail.create(name: "The Rake", picture_url: "therake.png")
 Dose.create(cocktail: therake, ingredient: Ingredient.find_by(name: 'green'), description: '1 drop of')
 Dose.create(cocktail: therake, ingredient: Ingredient.find_by(name: 'red'), description: '1 bucket of')
 Review.create(cocktail: therake, review_name: 'Anon', content: 'Too much red, too little green')
 
-yannbreak = Cocktail.create(name: "Yann Break")
+yannbreak = Cocktail.create(name: "Yann Break", picture_url: "bg2.jpg")
 Dose.create(cocktail: yannbreak, ingredient: Ingredient.find_by(name: 'water'), description: '1 drop of')
 
-livecode = Cocktail.create(name: "Livecode")
+livecode = Cocktail.create(name: "Livecode", picture_url: "bg2.jpg")
 Dose.create(cocktail: livecode, ingredient: Ingredient.find_by(name: 'Jägermeister'), description: '1')
 Review.create(cocktail: livecode, review_name: 'Student 1', content: 'Lakshmi is better')
 Review.create(cocktail: livecode, review_name: 'Student 2', content: 'Beer in fridge tastes better')

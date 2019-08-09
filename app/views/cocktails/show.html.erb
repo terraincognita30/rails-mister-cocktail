@@ -5,30 +5,29 @@
         <div class="form">
 <h1><%=@cocktail.name%></h1>
 <br>
-<h3>Ingredients</h3>
-          <div class="mt-3">
+<div class="mt-3">
 
-<%= image_tag "bg2.jpg", width: "200" %>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 
+<h3 style="padding-top: 30px;">Ingredients</h3>
 <%@cocktail.doses.each do |dose|%>
-<ul>
-<li> <%=dose.description%> <%=dose.ingredient.name%>
+<ul class = "styleless" style= "list-style: none">
+<li style= "padding: 10px;"> <%=dose.description%> <%=dose.ingredient.name%><br>
   <%= link_to "Delete", dose_path(dose), method: :delete %>
 </li>
 </ul>
 <%end%>
 </div>
 
-<h3 style= "padding-bottom: 10px">Reviews</h3>
+<h3>Reviews</h3>
 <%@cocktail.reviews.each do |review|%>
 <ul class = "styleless" style= "list-style: none">
-<li> <%=review.review_name%>
-  <br> <%=review.content%>
+<li> <strong><%=review.review_name%></strong>
+  <br> <%=review.content%><br>
   <%= link_to "Delete", cocktail_path(@cocktail), method: :delete %>
 </li>
 </ul>
 <%end%>
-
 
 <div class="row mt-2">
     <div class="col-lg-12">

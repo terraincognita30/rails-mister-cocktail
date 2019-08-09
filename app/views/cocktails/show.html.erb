@@ -21,7 +21,8 @@
 <h3 style= "padding-bottom: 10px">Reviews</h3>
 <%@cocktail.reviews.each do |review|%>
 <ul class = "styleless" style= "list-style: none">
-<li> <%=review.review_name%> <%=review.content%>
+<li> <%=review.review_name%>
+  <br> <%=review.content%>
   <%= link_to "Delete", cocktail_path(@cocktail), method: :delete %>
 </li>
 </ul>

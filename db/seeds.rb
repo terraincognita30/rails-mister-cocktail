@@ -38,11 +38,6 @@ Review.create(cocktail: thejordan, review_name: 'Kingsley', content: 'This is no
 Review.create(cocktail: thejordan, review_name: 'Anon 2', content: 'Not available on Fridays')
 Review.create(cocktail: thejordan, review_name: 'Anon', content: 'Lakshmi is better')
 
-therake = Cocktail.create(name: "The Rake")
-Dose.create(cocktail: therake, ingredient: Ingredient.find_by(name: 'green'), description: '1 drop of')
-Dose.create(cocktail: therake, ingredient: Ingredient.find_by(name: 'red'), description: '1 bucket of')
-Review.create(cocktail: therake, review_name: 'Anon', content: 'Too much red, too little green')
-
 yannbreak = Cocktail.create(name: "Yann Break")
 Dose.create(cocktail: yannbreak, ingredient: Ingredient.find_by(name: 'water'), description: '1 drop of')
 
